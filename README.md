@@ -7,13 +7,13 @@ Still very much under construction.
 
 1. View HMHome, HMRoom objects configured
 2. View Accessories
+3. Add home
+4. Add room to home
 
 ## Roadmap:
 
-1. Add HMHomes
-2. Add HMRooms
-3. Assign Accessories to HMRooms
-4. Manage scenes
-5. Manage accessories and rooms
+1. Assign Accessories to HMRooms
+1. Manage scenes
+1. Manage accessories and rooms
 
 
