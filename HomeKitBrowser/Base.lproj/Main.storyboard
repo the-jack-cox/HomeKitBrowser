@@ -211,6 +211,77 @@
             </objects>
             <point key="canvasLocation" x="2276" y="1843"/>
         </scene>
+        <!--Add Home View Controller-->
+        <scene sceneID="5W3-2s-lSV">
+            <objects>
+                <viewController id="1VP-KD-6Ok" customClass="HKBAddHomeViewController" customModule="HomeKitBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZbH-GA-FNR"/>
+                        <viewControllerLayoutGuide type="bottom" id="90h-cG-YcT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cY6-oZ-P2p">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-f1-uev">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Add Home" id="o2v-6i-uPe">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="mLU-A7-qmh">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="1VP-KD-6Ok" id="Frg-ux-SH1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Done" id="bgC-3K-ejr">
+                                            <connections>
+                                                <action selector="donePressed:" destination="1VP-KD-6Ok" id="dZO-xl-rNU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Home Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDp-8L-2lo">
+                                <rect key="frame" x="16" y="92" width="568" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1VP-KD-6Ok" id="yE6-QU-1Hn"/>
+                                </connections>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r1H-PP-7Ao">
+                                <rect key="frame" x="535" y="150" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primary Home" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaW-ri-UeE">
+                                <rect key="frame" x="16" y="150" width="110" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r1H-PP-7Ao" firstAttribute="top" secondItem="nDp-8L-2lo" secondAttribute="bottom" constant="28" id="11N-PB-X05"/>
+                            <constraint firstItem="BEK-f1-uev" firstAttribute="top" secondItem="ZbH-GA-FNR" secondAttribute="bottom" id="9g0-Kr-A8k"/>
+                            <constraint firstItem="JaW-ri-UeE" firstAttribute="centerY" secondItem="r1H-PP-7Ao" secondAttribute="centerY" constant="-5" id="Bb7-MP-JU3"/>
+                            <constraint firstItem="nDp-8L-2lo" firstAttribute="trailing" secondItem="cY6-oZ-P2p" secondAttribute="trailingMargin" id="J6g-s2-BnG"/>
+                            <constraint firstItem="BEK-f1-uev" firstAttribute="leading" secondItem="cY6-oZ-P2p" secondAttribute="leading" id="VXQ-Nt-aQH"/>
+                            <constraint firstItem="JaW-ri-UeE" firstAttribute="leading" secondItem="nDp-8L-2lo" secondAttribute="leading" id="eMR-V6-bvZ"/>
+                            <constraint firstItem="nDp-8L-2lo" firstAttribute="top" secondItem="ZbH-GA-FNR" secondAttribute="bottom" constant="72" id="eT3-sM-Dzt"/>
+                            <constraint firstItem="r1H-PP-7Ao" firstAttribute="trailing" secondItem="nDp-8L-2lo" secondAttribute="trailing" id="jEa-S5-Ihe"/>
+                            <constraint firstAttribute="trailing" secondItem="BEK-f1-uev" secondAttribute="trailing" id="ole-Bp-ce8"/>
+                            <constraint firstItem="nDp-8L-2lo" firstAttribute="leading" secondItem="cY6-oZ-P2p" secondAttribute="leadingMargin" id="rqP-lT-uIu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="bgC-3K-ejr" id="0lc-VU-3t4"/>
+                        <outlet property="homeNameField" destination="nDp-8L-2lo" id="rOs-Kk-XMc"/>
+                        <outlet property="primarySwitch" destination="r1H-PP-7Ao" id="xRs-Q6-LXe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J29-Gb-ugG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="2601"/>
+        </scene>
         <!--Home Config Table View Controller-->
         <scene sceneID="B6u-TO-MAP">
             <objects>
@@ -243,6 +314,9 @@
                             <outlet property="delegate" destination="O4D-Zm-EJC" id="3D0-kF-dpi"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="1VP-KD-6Ok" kind="presentation" identifier="addHome" id="Kxd-6C-WDr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZQ-5i-ESU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

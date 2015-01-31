@@ -10,6 +10,7 @@
 		FA069BC51A758141005006C6 /* HKBRoomConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA069BC41A758141005006C6 /* HKBRoomConfigTableViewController.swift */; };
 		FA76C55C1A7C515100A5E081 /* HKBHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76C55B1A7C515100A5E081 /* HKBHomeTableViewCell.swift */; };
 		FA76C55E1A7CFE6F00A5E081 /* HKBAddRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76C55D1A7CFE6F00A5E081 /* HKBAddRoomViewController.swift */; };
+		FA76C5601A7D035600A5E081 /* HKBAddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76C55F1A7D035600A5E081 /* HKBAddHomeViewController.swift */; };
 		FA8CA5651A7B02CD00ACBB9F /* HKBHomeConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8CA5641A7B02CD00ACBB9F /* HKBHomeConfigTableViewController.swift */; };
 		FAB5FAD21A7449D60097FDA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5FAD11A7449D60097FDA1 /* AppDelegate.swift */; };
 		FAB5FAD41A7449D60097FDA1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5FAD31A7449D60097FDA1 /* FirstViewController.swift */; };
@@ -38,6 +39,7 @@
 		FA069BC41A758141005006C6 /* HKBRoomConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKBRoomConfigTableViewController.swift; sourceTree = "<group>"; };
 		FA76C55B1A7C515100A5E081 /* HKBHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKBHomeTableViewCell.swift; sourceTree = "<group>"; };
 		FA76C55D1A7CFE6F00A5E081 /* HKBAddRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKBAddRoomViewController.swift; sourceTree = "<group>"; };
+		FA76C55F1A7D035600A5E081 /* HKBAddHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKBAddHomeViewController.swift; sourceTree = "<group>"; };
 		FA8CA5641A7B02CD00ACBB9F /* HKBHomeConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKBHomeConfigTableViewController.swift; sourceTree = "<group>"; };
 		FAB5FACC1A7449D60097FDA1 /* HomeKitBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeKitBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB5FAD01A7449D60097FDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				FAC694A51A752E93008CCC95 /* HKBTopicConfigurationCollectionViewController.swift */,
 				FA069BC41A758141005006C6 /* HKBRoomConfigTableViewController.swift */,
 				FA76C55D1A7CFE6F00A5E081 /* HKBAddRoomViewController.swift */,
+				FA76C55F1A7D035600A5E081 /* HKBAddHomeViewController.swift */,
 				FA8CA5641A7B02CD00ACBB9F /* HKBHomeConfigTableViewController.swift */,
 				FA76C55B1A7C515100A5E081 /* HKBHomeTableViewCell.swift */,
 				FAB5FAD71A7449D60097FDA1 /* Main.storyboard */,
@@ -249,6 +252,7 @@
 				FAC694A91A757B7B008CCC95 /* UIViewConstraintExtension.swift in Sources */,
 				FA8CA5651A7B02CD00ACBB9F /* HKBHomeConfigTableViewController.swift in Sources */,
 				FA76C55E1A7CFE6F00A5E081 /* HKBAddRoomViewController.swift in Sources */,
+				FA76C5601A7D035600A5E081 /* HKBAddHomeViewController.swift in Sources */,
 				FA76C55C1A7C515100A5E081 /* HKBHomeTableViewCell.swift in Sources */,
 				FAB5FAF61A744E8A0097FDA1 /* TableViewController.swift in Sources */,
 				FAC694A61A752E93008CCC95 /* HKBTopicConfigurationCollectionViewController.swift in Sources */,

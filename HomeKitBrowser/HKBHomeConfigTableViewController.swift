@@ -10,6 +10,7 @@ import UIKit
 import HomeKit
 
 let homeCell = "homeCell"
+let addHomeSegue = "addHome"
 class HKBHomeConfigTableViewController: UITableViewController, HMHomeManagerDelegate {
     
     var homeManager:HMHomeManager = HMHomeManager()
@@ -30,8 +31,15 @@ class HKBHomeConfigTableViewController: UITableViewController, HMHomeManagerDele
         homeManager.delegate = self;
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // make myself the delegate again
+        self.homeManager.delegate = self
+    }
+    
     func addHomePressed(sender: AnyObject!) {
         println("Add home button pressed")
+        self.performSegueWithIdentifier(addHomeSegue, sender: sender)
     }
     // MARK: HMHomeManagerDelegate
     
@@ -39,6 +47,22 @@ class HKBHomeConfigTableViewController: UITableViewController, HMHomeManagerDele
         println("homes = \(homeManager.homes)")
         self.tableView.reloadData()
         
+    }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
+        if (segue.identifier == "showRoom") {
+            let ctl = segue.destinationViewController as HKBRoomConfigTableViewController
+            let cell = sender as HKBHomeTableViewCell
+            ctl.home = cell.home
+        } else if (segue.identifier == addHomeSegue) {
+            let ctl = segue.destinationViewController as HKBAddHomeViewController
+            ctl.homeManager = self.homeManager
+        }
     }
 
     // MARK: - Table view data source
@@ -114,18 +138,7 @@ class HKBHomeConfigTableViewController: UITableViewController, HMHomeManagerDele
     */
 
     
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-        if (segue.identifier == "showRoom") {
-            let ctl = segue.destinationViewController as HKBRoomConfigTableViewController
-            let cell = sender as HKBHomeTableViewCell
-            ctl.home = cell.home
-        }
-    }
     
 
 }

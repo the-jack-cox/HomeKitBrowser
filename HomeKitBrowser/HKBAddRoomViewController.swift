@@ -34,6 +34,13 @@ class HKBAddRoomViewController: UIViewController, UITextFieldDelegate {
             
             home.addRoomWithName(roomName, completionHandler: { (room, error) -> Void in
                 if (error != nil) {
+                    var alertCtl = UIAlertController(title: "Error",
+                        message: "Error adding room \(roomName)\n\(error.localizedDescription)",
+                        preferredStyle: UIAlertControllerStyle.Alert)
+                    alertCtl.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                        // Do something appropriate
+                    }))
+                    self.presentViewController(alertCtl, animated: true, completion: nil)
                     
                 } else {
                     self.dismissViewControllerAnimated(true, completion: nil)
